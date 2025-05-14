@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Start  -->
+    <div class="wapper">
+        <h2 id="count-el">0</h2>
+        <button onclick="increment()">Increment</button>
+        <button onclick="save()">Save</button>
+        <p id="save-el">Previous entries: </p>
+    </div>
+    <!-- Start Java Srript -->
+    <script>
+        let count = 0
+        let countEl = document.getElementById("count-el")
+        let saveEl = document.getElementById("save-el")
+
+        function increment() {
+            count += 1
+            countEl.textContent = count
+        }
+
+        function save() {
+            let countStr = count + " - "
+            saveEl.textContent += countStr
+            count = 0
+            countEl.textContent = count
+        }
+    </script>
+</body>
+
+</html>
